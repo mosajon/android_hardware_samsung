@@ -12,8 +12,8 @@ LOCAL_SHARED_LIBRARIES := \
     libbinder \
     libcutils \
     libhardware_legacy
-
-LOCAL_CFLAGS := 
+# fix audio
+LOCAL_CFLAGS := -DSEC_PRODUCT_FEATURE_RIL_CALL_DUALMODE_CDMAGSM
 
 ifeq ($(TARGET_BOARD_PLATFORM),exynos4)
 LOCAL_CFLAGS += -DRIL_CALL_AUDIO_PATH_EXTRAVOLUME
